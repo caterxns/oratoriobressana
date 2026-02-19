@@ -1,30 +1,76 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Oratorio San Giovanni Bosco Bressana Bottarone</title> 
-        <link id="stylesheet" rel="stylesheet" href="style.css"> 
-        <script src="script.js" defer></script> 
-    </head>
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Oratorio San Giovanni Bosco | Bressana Bottarone</title> 
+    <meta name="description" content="Sito ufficiale dell'Oratorio San Giovanni Bosco di Bressana Bottarone.">
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script> 
+</head>
 <body>
-    <header>
-        <img src="logo.jpg" alt="Logo Oratorio" class="logo">
-        <h1>Benvenuti all'Oratorio San Giovanni Bosco di Bressana Bottarone!</h1>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="attivita.html">Attività</a>
-          <a href="calendario.html">Calendario</a>
-          <a href="iscrizioni.html">Iscrizioni</a>
-          <a href="contatti.html">Contatti</a>
-  </header>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.jpg" alt="Logo Oratorio" class="logo-small">
+            </a>
+            
+            <div class="nav-wrapper">
+                <nav>
+                    <a href="attivita.html">Attività</a>
+                    <a href="calendario.html">Calendario</a>
+                    <a href="iscrizioni.html">Iscrizioni</a>
+                    <a href="contatti.html">Contatti</a>
+                </nav>
+                <form class="search-form">
+                    <input type="text" placeholder="Cerca nel sito...">
+                    <button type="submit">🔍</button>
+                </form>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <p>Questo è il sito ufficiale dell'oratorio! Qui troverai tutte le informazioni su attività, eventi e iscrizioni.</p>
-  </main>
+    <main>
+        <section class="hero">
+            <img src="logo.jpg" alt="Logo Grande Oratorio" class="logo-hero">
+            <h1>Benvenuti nel sito ufficiale dell'Oratorio di Bressana Bottarone</h1>
+            <p class="tagline">Qui troverai tutte le informazioni su attività, eventi e iscrizioni. Unisciti a noi!</p>
+        </section>
 
-  <footer>
-    <p>&copy; 2026 Oratorio San Giovanni Bosco Bressana Bottarone</p>
-  </footer>
+        <section class="press-section">
+            <div class="section-title-wrapper">
+            <div class="accent-rect"></div>
+            <h3>Dicono di noi...</h3>
+        </div>
+            <div class="cards-container">
+                <a href="https://laprovinciapavese.gelocal.it/pavia/cronaca/2025/06/01/news/festa_di_fine_anno_per_le_scuole_medie_un_successo-15172698/" target="_blank" class="card">
+                    <span class="date">1 Giugno 2025</span>
+                    <img src="prom.webp" alt="Ballo medie" class="card-img">
+                    <h4>Ballo di fine anno per le scuole medie: un successo</h4>
+                    <p>All'evento hanno partecipato circa 90 ragazzi, tutti in abiti da cerimonia per...</p>
+                    <span class="read-more">Leggi l'articolo →</span>
+                </a>
+                <a href="https://laprovinciapavese.gelocal.it/pavia/cronaca/2025/05/15/news/bressana_che_cambia_con_i_ragazzi_delloratorio_facciamo_comunita-15147272/" target="_blank" class="card">
+                    <span class="date">15 Maggio 2025</span>
+                    <img src="ragazzi.webp" alt="Gruppo ragazzi" class="card-img">
+                    <h4>Bressana che cambia con i ragazzi dell'Oratorio</h4>
+                    <p>La comunità giovanile di Bressana è molto intraprendente nell'organizzazione di...</p>
+                    <span class="read-more">Leggi l'articolo →</span>
+                </a>
+                <a href="https://laprovinciapavese.gelocal.it/pavia/cronaca/2025/05/11/news/tremila_volumi_in_vendita_per_poter_ristrutturare_loratorio_a_frazione_argine-15141637/" target="_blank" class="card">
+                    <span class="date">11 Maggio 2025</span>
+                    <img src="libri.webp" alt="Mercatino libri" class="card-img">
+                    <h4>Tremila volumi per ristrutturare l'oratorio</h4>
+                    <p>L'oratorio presenta il “Mercatino di libri”, così da finanziare i lavori...</p>
+                    <span class="read-more">Leggi l'articolo →</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Oratorio San Giovanni Bosco Bressana Bottarone (PV)</p>
+    </footer>
 </body>
 </html>
