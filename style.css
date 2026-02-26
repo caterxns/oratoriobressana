@@ -196,6 +196,27 @@ nav a:hover { color: #357ABD; }
     border-radius: 8px;
     margin-bottom: 1.2rem;
 }
+.date {
+    display: block;
+    font-size: 0.75rem; /* Molto piccolo */
+    text-transform: uppercase; /* Tutto maiuscolo per stile "giornalistico" */
+    letter-spacing: 1px;
+    color: #999; /* Grigio chiaro */
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+.read-more {
+    display: inline-block;
+    width: fit-content;
+    margin-top: auto; /* Lo spinge sempre in fondo alla card */
+    color: #004080; /* Blu scuro dell'oratorio */
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
 
 /* FOOTER */
 .site-footer {
@@ -229,15 +250,19 @@ nav a:hover { color: #357ABD; }
 
 .footer-contact a { color: #ffffff; text-decoration: none; }
 
-.social-icons { display: flex; gap: 20px; align-items: center; }
+.social-icons { 
+    display: flex; 
+    gap: 20px; 
+    align-items: center; 
+}
 
 .social-icons img {
     width: 36px;
     height: 36px;
-    filter: brightness(0) invert(1);
-    transition: 0.3s;
+    object-fit: contain; /* Mantiene le proporzioni */
+    transition: transform 0.3s;
+    display: block; /* Fondamentale per la visibilità */
 }
-
 .footer-bottom {
     margin-top: 3rem;
     padding-top: 1.5rem;
@@ -423,4 +448,294 @@ nav a:hover { color: #357ABD; }
 @media (max-width: 650px) {
     .input-grid { grid-template-columns: 1fr; }
     .form-container { padding: 1.5rem; }
+}
+
+/* PAGINA ATTIVITÀ */
+.activities-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.activities-hero {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.activities-hero h1 {
+    font-size: 3rem;
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+/* --- UNIFICAZIONE ATTIVITÀ (Card e Banner) --- */
+
+/* --- GRANDE DIVISORE DEL GIORNO --- */
+.main-day-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.main-day-header h2 {
+    font-size: 2.2rem; /* Molto più grande */
+    font-weight: 800;
+    color: #004080;
+    white-space: nowrap; /* Impedisce al testo di andare a capo */
+    margin: 0 !important; /* Rimuove margini extra */
+}
+
+.calendar-icon {
+    font-size: 2rem;
+}
+
+.header-line {
+    flex-grow: 1;
+    height: 3px;
+    background: #edf2f7; /* Linea grigia chiara che attraversa la pagina */
+    border-radius: 2px;
+}
+
+
+.activity-group h3 {
+    font-size: 1.4rem;
+    color: #004080;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Modifica al Responsive per schermi piccoli */
+@media (max-width: 768px) {
+    .main-day-header h2 {
+        font-size: 1.6rem;
+    }
+    .header-line {
+        display: none; /* Nascondiamo la linea su mobile per far stare tutto il testo */
+    }
+}
+
+/* Stile base condiviso per tutte le card del venerdì */
+.activity-card, .activity-card-large {
+    background: white;
+    border: 1px solid #eee;
+    border-left: 5px solid #357ABD; /* Accento blu uguale per tutti */
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Card grande (Spazio Compiti) */
+/* --- DESIGN ATTIVITÀ "MODERN TILES" --- */
+
+/* Regola comune per tutte le card del Venerdì */
+.activity-tile, .activity-tile-wide {
+    background: #ffffff;
+    border: 2px solid #edf2f7; /* Grigio-azzurro chiarissimo */
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Card Lunga (Spazio Compiti) */
+.activity-tile-wide {
+    flex-direction: row; /* Icona a destra */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 20px;
+}
+
+.tile-content h3 {
+    color: #004080;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.tile-content p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.tile-icon {
+    font-size: 2.2rem;
+    background: #f0f7ff; /* Cerchio leggero dietro l'icona */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Griglia Catechismo */
+.catechism-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.activity-tile {
+    text-align: center;
+    min-height: 120px;
+    justify-content: center;
+}
+
+.activity-tile h4 {
+    color: #004080;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Orari (Uguali per tutti) */
+.tile-time {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #357ABD; /* L'orario ora è il tocco di colore */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .activity-tile-wide {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* EVENTI VARIABILI */
+.variable-events { margin: 6rem 0; text-align: center; }
+.calendar-notice { margin-bottom: 3rem; color: #666; }
+.calendar-notice a { color: #357ABD; font-weight: 600; }
+
+.event-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.event-icon { font-size: 2rem; display: block; margin-bottom: 1rem; }
+
+
+/* SPAZIO COMPITI - DESCRIZIONE */
+.homework-desc {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+/* --- SEZIONE SOLIDARIETÀ (Stile Outline) --- */
+.solidarity-box {
+    background: transparent; /* Sfondo trasparente */
+    border: 3px solid #004080; /* Contorno blu */
+    color: #004080; /* Testo base blu */
+    padding: 3rem;
+    border-radius: 25px;
+    margin-top: 4rem;
+}
+
+.solidarity-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(0, 64, 128, 0.2); /* Linea blu semitrasparente */
+    padding-bottom: 2rem;
+}
+
+.solidarity-text h2 {
+    color: #004080 !important;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.solidarity-text p {
+    color: #357ABD; /* Un blu leggermente più chiaro per il sottotitolo */
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Gestione Loghi */
+.solidarity-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.caritas-logo {
+    height: 130px; 
+}
+
+.solidarity-img-side {
+    width: 180px; 
+    height: auto;
+    object-fit: contain;
+}
+
+.solidarity-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.solidarity-content h3 {
+    color: #004080;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #357ABD;
+    display: inline-block;
+}
+
+.time-item strong {
+    color: #004080;
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.time-item p {
+    color: #444; /* Grigio scuro per le info secondarie, più leggibile */
+}
+
+/* Lista alimenti */
+.items-list li {
+    color: #333;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.items-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #004080; /* Check blu */
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .solidarity-header-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .solidarity-logos {
+        justify-content: center;
+    }
+
+    .solidarity-content {
+        grid-template-columns: 1fr;
+    }
 }
