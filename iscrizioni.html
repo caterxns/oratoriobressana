@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Iscrizioni 2026 | Oratorio Bressana</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.jpg" alt="Logo Oratorio" class="logo-small">
+            </a>
+            <button class="menu-toggle" aria-label="Apri menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <div class="nav-wrapper">
+                <nav>
+                    <a href="attivita.html">Attività</a>
+                    <a href="calendario.html">Calendario</a>
+                    <a href="iscrizioni.html" class="active">Iscrizioni</a>
+                    <a href="contatti.html">Contatti</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="registration-main">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Pronti per un nuovo anno insieme?</h2>
+                <p>Inserisci i dati qui sotto per preparare il tuo modulo. <br>Scaricalo e stampalo: la procedura si concluderà in Oratorio!</p>
+            </div>
+
+            <form id="registration-form">
+                <div class="input-grid">
+                    <div class="form-group">
+                        <label for="nome">Nome del ragazzo/a</label>
+                        <input type="text" id="nome" required placeholder="Es. Luca">
+                    </div>
+                    <div class="form-group">
+                        <label for="cognome">Cognome</label>
+                        <input type="text" id="cognome" required placeholder="Es. Morini">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="eta">Classe frequentata o età</label>
+                    <input type="text" id="eta" required placeholder="Es. 3ª Media">
+                </div>
+
+                <div class="form-group">
+                    <label for="contatto">Contatto di un genitore</label>
+                    <input type="text" id="contatto" required placeholder="Nome e numero di telefono">
+                </div>
+
+                <section class="minimal-pricing-section">
+                    <div class="simple-pricing">
+                        <p class="subtitle">L'iscrizione al nostro Oratorio ANSPI 2026 ti permette di partecipare a tutte le nostre attività: al GREST 2026, agli incontri di catechismo, alle gite e ai laboratori in oratorio in totale sicurezza.</p>
+                        <div class="price-row">
+                            <span>Fino alla 5ª Elementare</span>
+                            <span class="dots"></span>
+                            <strong>10€</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Dalla 1ª Media in su</span>
+                            <span class="dots"></span>
+                            <strong>15€</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="payment-notice">
+                    <span class="notice-icon">⚠️</span>
+                    <p><strong>Nota importante:</strong> Il modulo generato va consegnato <strong>firmato di persona</strong> presso la segreteria dell'Oratorio. Il pagamento della quota assicurativa deve essere effettuato contestualmente alla consegna.</p>
+                </div>
+
+                <button type="submit" class="download-btn">
+                    GENERA IL TUO MODULO PDF 📄
+                </button>
+                <p class="form-footer-note">Ci vediamo presto in Oratorio!</p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        </footer>
+</body>
+</html>
